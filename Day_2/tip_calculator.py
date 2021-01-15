@@ -8,9 +8,11 @@
 
 # HINT 2: https://www.kite.com/python/answers/how-to-limit-a-float-to-two-decimal-places-in-python
 
-print("Welcome to the tip calculator.")
+# "{:.2f}".format() makes it so that the result keeps 2 places after the decimal even if it's a zero
+
+print("Welcome to the tip calculator.\n")
 bill = float(input("What is the total bill? $"))
-percentage = int(input("What percentage tip would you like to give 10, 12, or 15? "))
+tip = int(input("What percentage tip would you like to give 10, 12, or 15? "))
 people = int(input("How many people to split the bill? "))
-total = round(bill / people * (percentage / 100 + 1.0), 2)
+total = "{:.2f}".format(round(bill / people * (tip / 100 + 1.0), 2))
 print(f"Each person should pay: ${total}")
