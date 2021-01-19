@@ -74,29 +74,24 @@ name2 = input("What is their name? \n")
 trueCount = 0
 loveCount = 0
 
-trueCount += name1.lower().count("t")
-trueCount += name2.lower().count("t")
-trueCount += name1.lower().count("r")
-trueCount += name2.lower().count("r")
-trueCount += name1.lower().count("u")
-trueCount += name2.lower().count("u")
-trueCount += name1.lower().count("e")
-trueCount += name2.lower().count("e")
+combinedName = name1 + name2
 
-loveCount += name1.lower().count("l")
-loveCount += name2.lower().count("l")
-loveCount += name1.lower().count("o")
-loveCount += name2.lower().count("o")
-loveCount += name1.lower().count("v")
-loveCount += name2.lower().count("v")
-loveCount += name1.lower().count("e")
-loveCount += name2.lower().count("e")
+trueCount += combinedName.lower().count("t")
+trueCount += combinedName.lower().count("r")
+trueCount += combinedName.lower().count("u")
+trueCount += combinedName.lower().count("e")
 
-score = str(trueCount) + str(loveCount)
 
-if int(score) < 10 or int(score) > 90:
+loveCount += combinedName.lower().count("l")
+loveCount += combinedName.lower().count("o")
+loveCount += combinedName.lower().count("v")
+loveCount += combinedName.lower().count("e")
+
+score = int(str(trueCount) + str(loveCount))
+
+if score < 10 or score > 90:
   print(f"Your score is {score}, you go together like coke and mentos.")
-elif int(score) > 40 and int(score) < 50:
+elif score > 40 and score < 50:
   print(f"Your score is {score}, you are alright together.")
 else:
   print(f"Your score is {score}.")
