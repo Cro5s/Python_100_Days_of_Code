@@ -1,3 +1,5 @@
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
 print('''
 *******************************************************************************
           |                   |                  |                     |
@@ -21,6 +23,31 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 *******************************************************************************
 ''')
 print("Welcome to Treasure Island.")
-print("Your mission is to find the treasure.") 
+print("Your mission is to find the treasure.")
 
-#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+choice = input("You're at a crossroads. Do you want to go left or right? ")
+
+if choice.lower() == "left":
+  choice = input("You've reached a dock with vast ocean in between you and your destination. Do you want to swim or wait for a boat? ")
+
+  if choice.lower() == "wait":
+    choice = input("After getting to your destination, you enter a building with three doors that are RED, BLUE, and YELLOW. Which door do you want to go through? ")
+
+    if choice.lower() == "yellow":
+      print("You enter a room with the treasure.")
+      print("You Win!")
+    elif choice.lower() == "red":
+      print("You were burned by fire.")
+      print("Game Over.")
+    elif choice.lower() == "blue":
+      print("You were eaten by beasts.")
+      print("Game Over.")
+    else:
+      print("Game Over.")
+  else:
+    print("You were attacked by a shark!")
+    print("Game Over.")
+else:
+  print("You fell into a hole.")
+  print("Game Over.")
+
